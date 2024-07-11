@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .A {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            width: 200%;
+        }
+        .shop, .shop1 {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.5s ease;
+            overflow: hidden;
+        }
+        .shop3 {
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            width: 300px; /* Fixed width for consistency */
+        }
+        .image {
+            width: 100%;
+            height: auto;
+            transition: opacity 0.5s ease;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .shop3:hover .image {
+            opacity: 0.5;
+        }
+        .shop3:hover .overlay {
+            opacity: 1;
+        }
+        .AA{
+          margin-left: 600px;
+        }
+        .nextButton, .prevButton {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="A">
+        <div class="shop">
+            <div class="shop3">
+                <img src="images/shop2.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>TROUSERS</h1>
+                <p>$ 55.00 USD</p>
+            </div>
+            <div class="shop3">
+                <img src="images/shop3.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text1"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>JEANS</h1>
+                <p>$ 50.00 USD</p>
+            </div>
+            <div class="shop3">
+                <img src="images/shop4.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text2"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>SHORTS</h1>
+                <p>$ 34.00 USD</p>
+            </div>
+            <div class="shop3">
+                <img src="images/shop5.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text3"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>WHITE T-SHIRT</h1>
+                <p>$ 75.00 USD</p>
+            </div>
+        </div>
+        <div class="shop shop1">
+            <div class="shop3">
+                <img src="images/shop2.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>TROUSERS</h1>
+                <p>$ 55.00 USD</p>
+            </div>
+            <div class="shop3">
+                <img src="images/shop3.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text1"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>JEANS</h1>
+                <p>$ 50.00 USD</p>
+            </div>
+            <div class="shop3">
+                <img src="images/shop4.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text2"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>SHORTS</h1>
+                <p>$ 34.00 USD</p>
+            </div>
+            <div class="shop3">
+                <img src="images/shop5.jpg" class="image" alt="" width="300">
+                <div class="overlay">
+                    <div class="text3"><h1>SHOP NOW</h1></div>
+                </div>
+                <h1>WHITE T-SHIRT</h1>
+                <p>$ 75.00 USD</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="AA">
+        <button class="prevButton">Prev</button>
+        <button class="nextButton">Next</button>
+    </div>
+
+    <script>
+        const shops = document.querySelectorAll(".shop, .shop1");
+        const images = document.querySelectorAll(".shop3 img");
+        const prevButton = document.querySelector(".prevButton");
+        const nextButton = document.querySelector(".nextButton");
+
+        let currentIndex = 0;
+
+        const slideImage = (index) => {
+            currentIndex = index;
+            const translateValue = -currentIndex * 100;
+            shops.forEach(shop => {
+                shop.style.transform = `translateX(${translateValue}%)`;
+            });
+        };
+
+        const updateSlide = (direction) => {
+            if (direction === 'next') {
+                currentIndex = (currentIndex + 1) % images.length;
+            } else if (direction === 'prev') {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+            }
+            slideImage(currentIndex);
+        };
+
+        nextButton.addEventListener("click", () => updateSlide('next'));
+        prevButton.addEventListener("click", () => updateSlide('prev'));
+    </script>
+</body>
+</html>

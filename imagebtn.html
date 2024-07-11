@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contain {
+            display: flex;
+            column-gap: 30px;
+        }
+        .left {
+            margin-left: 40px;
+        }
+        .right {
+            position: relative;
+        }
+        .right img {
+            display: none; 
+            height: 600px;
+            width: 600px;
+        }
+        .right .r1 img{
+           display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="left">
+            <h1 class="btn A">COTTON JERSEY T-SHIRT</h1><br>
+            <h1 class="btn B">WOOL BLEND NECK SWEATER</h1><br>
+            <h1 class="btn C">DENIM BUTTON CLASSIC JACKET</h1><br>
+            <h1 class="btn D">A-LINE FLORAL PRINT SKIRT</h1><br>
+            <h1 class="btn E">STRAIGHT-LEG TROUSERS</h1>
+        </div>
+        <div class="right">
+            <div class="r1">
+                <img src="images/11.jpg" class="img">
+            </div>
+            <div class="r2">
+                <img src="images/12.jpg" class="img">
+            </div>
+            <div class="r3">
+                <img src="images/13.jpg" class="img">
+            </div>
+            <div class="r4">
+                <img src="images/14.jpg" class="img">
+            </div>
+            <div class="r5">
+                <img src="images/15.jpg" class="img">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var buttons = document.querySelectorAll(".btn");
+            var images = document.querySelectorAll(".img");
+
+            buttons.forEach(function(button, index) {
+                button.addEventListener("click", function() {
+                    images.forEach(function(img) {
+                        img.style.display = "none";
+                    });
+                    images[index].style.display = "block";                    
+                    buttons.forEach(function(btn) {
+                        btn.style.color = "black";
+                    });
+                    button.style.color = "gray";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

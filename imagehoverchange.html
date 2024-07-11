@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc{
+    margin-top: 100px;
+    margin-left: 300px; 
+    display: flex;
+}
+.abc p{
+    padding:50px;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+}
+.abc p:hover{
+    text-decoration: underline;
+}
+ .contain{
+    position: relative;
+    width:100%;
+} 
+.bb{
+   display: block; 
+}
+.b{
+    gap:20px;
+    margin-left:10px;
+    margin-top: 40px;
+    width:100%;
+    position: absolute;
+    display: flex;
+}
+.inner1 .model1{
+    width:300px;
+    height:300px;
+    margin-left: 10px;
+}
+.inner1 .back{
+   width:300px;
+   height:300px;
+   margin-left: 10px;
+   position:absolute;
+   left:0;
+   opacity: 0;
+}
+.inner1 .back:hover{
+   opacity: 1;
+}
+.inner2 .model2{
+    width:300px;
+    height:300px;
+}
+.inner2 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:330px;
+   top:0px;
+   opacity: 0;
+}
+.inner2 .back:hover{
+   opacity: 1;
+}
+.inner3 .model3{
+    width:300px;
+    height:300px;
+}
+.inner3 .back{
+   width:300px;
+   height:300px;
+   top:0px;
+   position:absolute;
+   left:650px;
+   opacity: 0;
+}
+.inner3 .back:hover{
+   opacity: 1;
+}
+.inner4 .model4{
+    width:300px;
+    height:300px;
+}
+.inner4 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:970px;
+   top:0px;
+   opacity: 0;
+}
+.inner4 .back:hover{
+   opacity: 1;
+}
+
+.cc{
+    display: block;
+}
+
+.c{
+    display:flex;
+    gap:20px;
+    margin-left:10px;
+    margin-top: 40px;
+    width:100%;
+    top:0;
+    position: absolute;
+}
+.inner1 .model1{
+    width:300px;
+    height:300px;
+}
+.inner1 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:0;
+   opacity: 0;
+}
+.inner1 .back:hover{
+   opacity: 1;
+}
+.inner2 .model2{
+    width:300px;
+    height:300px;
+}
+.inner2 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:330px;
+   opacity: 0;
+}
+.inner2 .back:hover{
+   opacity: 1;
+}
+.inner3 .model3{
+    width:300px;
+    height:300px;
+}
+.inner3 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:650px;
+   opacity: 0;
+}
+.inner3 .back:hover{
+   opacity: 1;
+}
+.inner4 .model4{
+    width:300px;
+    height:300px;
+}
+.inner4 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:970px;
+   opacity: 0;
+}
+.inner4 .back:hover{
+   opacity: 1;
+}
+
+.dd{
+    display:block;
+}
+.d{
+    display:flex;
+    gap:20px;
+    margin-left:10px;
+    margin-top: 40px;
+    width:100%;
+    top:0;
+    z-index:22;
+     position: absolute; 
+     
+}
+ .inner1 .model1{
+    width:300px;
+    height:300px;
+}
+.inner1 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:0;
+   opacity: 0;
+}
+.inner1 .back:hover{
+   opacity: 1;
+}
+.inner2 .model2{
+    width:300px;
+    height:300px;
+}
+.inner2 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:330px;
+   opacity: 0;
+}
+.inner2 .back:hover{
+   opacity: 1;
+}
+.inner3 .model3{
+    width:300px;
+    height:300px;
+}
+.inner3 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:650px;
+   opacity: 0;
+}
+.inner3 .back:hover{
+   opacity: 1;
+}
+.inner4 .model4{
+    width:300px;
+    height:300px;
+}
+.inner4 .back{
+   width:300px;
+   height:300px;
+   position:absolute;
+   left:970px;
+   opacity: 0;
+}
+.inner4 .back:hover{
+   opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <div class="abc">
+        <p class="new">NEW ARRIVALS</p>
+        <p class="best">BEST SELLER</p>
+        <p class="exclusive">EXCLUSIVE</p>
+    </div>
+    
+    <div class="contain">
+        <div class="bb">
+    <div class="b">
+        <div class="inner1">
+        <img src="images/model1.avif" class="model1">
+        <img src="images/model5.avif" class="back">
+        </div>
+        <div class="inner2">
+        <img src="images/model6.avif" class="model2">
+        <img src="images/model4.avif" class="back">
+        </div>
+        <div class="inner3">
+        <img src="images/model2.avif" class="model3">
+        <img src="images/model3.avif" class="back">
+        </div>
+        <div class="inner4">
+        <img src="images/model7.avif" class="model4">
+        <img src="images/model5.avif" class="back">  
+        </div>
+    </div>
+    </div>
+    <div class="cc">
+    <div class="c">
+        <div class="inner1">
+        <img src="images/model2.avif" class="model1">
+        <img src="images/model4.avif" class="back">
+        </div>
+        <div class="inner2">
+        <img src="images/model5.avif" class="model2">
+        <img src="images/model3.avif" class="back">
+        </div>
+        <div class="inner3">
+        <img src="images/model6.avif" class="model3">
+        <img src="images/model8.jpg" class="back">
+        </div>
+        <div class="inner4">
+        <img src="images/model7.avif" class="model4">
+        <img src="images/model1.avif" class="back">  
+        </div>
+    </div>
+    </div>
+    <div class="dd">
+    <div class="d">
+        <div class="inner1">
+        <img src="images/model3.avif" class="model1">
+        <img src="images/model5.avif" class="back">
+        </div>
+        <div class="inner2">
+        <img src="images/model1.avif" class="model2">
+        <img src="images/model2.avif" class="back">
+        </div>
+        <div class="inner3">
+        <img src="images/model8.jpg" class="model3">
+        <img src="images/model4.avif" class="back">
+        </div>
+        <div class="inner4">
+        <img src="images/model7.avif" class="model4">
+        <img src="images/model6.avif" class="back">  
+        </div>
+    </div>
+    </div>
+         </div>
+         <script>
+
+var newArriaval = document.querySelector(".new");
+    var bestSeller = document.querySelector(".best");
+    var exclusive = document.querySelector(".exclusive");
+
+        newArriaval.addEventListener("click",function(){
+        var b = document.querySelector(".bb");
+        var c = document.querySelector(".cc");
+        var d = document.querySelector(".dd");
+        b.style.display = "block";
+        c.style.display = "none"; 
+        d.style.display = "none"; 
+        console.log("working");
+    });
+
+    bestSeller.addEventListener("click",function(){
+        var b = document.querySelector(".bb");
+        var c = document.querySelector(".cc");
+        var d = document.querySelector(".dd");
+        b.style.display = "none";
+        c.style.display = "block"; 
+        d.style.display = "none"; 
+        console.log("working");
+    });
+    exclusive.addEventListener("click",function(){
+        var b = document.querySelector(".bb");
+        var c = document.querySelector(".cc");
+        var d = document.querySelector(".dd");
+        b.style.display = "none";
+        c.style.display = "none"; 
+        d.style.display = "block"; 
+        console.log("working");
+    });
+         </script>
+</body>
+</html>
